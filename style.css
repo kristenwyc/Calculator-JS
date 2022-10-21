@@ -56,3 +56,58 @@ body {
  ::-webkit-scrollbar-thumb:hover {
      background: #555;
  }
+
+ /* Buttons */
+
+ .calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+ }
+
+ button {
+    min-height: 50px;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: rgb(199, 199, 199);
+ }
+
+button:hover {
+    filter: brightness(115%);
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+ .operator {
+    background: darkgrey;
+    color: white;
+    font-size: 30px;
+ }
+
+ .equal-sign {
+    grid-column: -2;
+    grid-row: 2 / span 4;
+    background: rgb(46, 185, 111);
+ }
+
+.clear {
+    background: rgb(253, 94, 94);
+    color: white;
+}
+
+.clear:hover {
+    filter: brightness(80%);
+}
+
+/* Media Query: Large Smartphone (Vertical) */
+@media screen and (max-width: 600px) {
+    .calculator {
+        width: 95%;
+    }
+}
